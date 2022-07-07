@@ -30,6 +30,7 @@ def signup():
   session.clear()
   session['user_id'] = newUser.id
   session['loggedIn'] = True
+  
   return jsonify(id = newUser.id)
 
 @bp.route('/users/login', methods=['POST'])
